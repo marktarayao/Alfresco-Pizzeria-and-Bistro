@@ -1,0 +1,1203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alfresco Pizzeria &amp; Bistro</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════════════════════
+       NAV
+  ══════════════════════════════════════════════════════════ -->
+  <nav id="main-nav">
+    <a href="#" class="nav-logo">
+     
+      <img src="Highlights/alfresco-logo.jpg" alt="Alfresco Pizzeria &amp; Bistro Logo" class="nav-logo-img" />
+      <div class="nav-logo-text">
+        Alfresco
+        <small>Pizzeria &amp; Bistro</small>
+      </div>
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="nav-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Events</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+    </ul>
+
+    <!-- Mobile hamburger -->
+    <div class="nav-burger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- Mobile drawer (toggled by main.js) -->
+  <div class="nav-drawer" id="nav-drawer">
+    <a href="#menu">Menu</a>
+    <a href="#about">About</a>
+    <a href="#services">Events</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact Us</a>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       HERO
+  ══════════════════════════════════════════════════════════ -->
+  <section class="hero">
+    
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-eyebrow">Open Daily · Dine In &amp; Takeaway · Est. 2020</div>
+      <h1>Handcrafted Pizza,<br><em>Bistro Heart</em></h1>
+      <p>Great food, good company, and a relaxed dining experience — welcome to Alfresco Pizzeria & Bistro.</p>
+      <a href="#menu" class="btn btn-primary">Explore the Menu</a>
+      <a href="#contact" class="btn btn-ghost">Find Us</a>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════════════
+       INTRO BAND
+  ══════════════════════════════════════════════════════════ -->
+  <div class="intro-band">
+    <p>"From handcrafted pizzas and pasta to flavorful comfort food and refreshing drinks — simple dishes made to be shared and enjoyed."</p>
+    <span class="sub">Alfresco Pizzeria &amp; Bistro · Est. 2020</span>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       MENU
+  ══════════════════════════════════════════════════════════ -->
+  <section class="menu-section" id="menu">
+    <div class="section-label">What We Serve</div>
+    <h2 class="section-title">Our Menu</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Thoughtfully crafted pizzas, refined comfort dishes, and freshly prepared pasta served in a warm and welcoming dining experience.</p>
+
+    <!-- Tab buttons -->
+    <div class="menu-tabs">
+      <button class="menu-tab active" onclick="switchTab(event,'pizzas')">Pizzas</button>
+      <button class="menu-tab" onclick="switchTab(event,'pasta')">Pasta &amp; Noodles</button>
+      <button class="menu-tab" onclick="switchTab(event,'appetizers')">Appetizers</button>
+      <button class="menu-tab" onclick="switchTab(event,'breakfast')">Breakfast All Day</button>
+      <button class="menu-tab" onclick="switchTab(event,'burgers')">Burger & Sandwich</button>
+      <button class="menu-tab" onclick="switchTab(event,'drinks')">Drinks</button>
+      <button class="menu-tab" onclick="switchTab(event,'main')">Main Dishes</button>
+      
+    </div>
+
+    <!-- ── PIZZAS — 4 highlighted cards + View Full Menu ───── -->
+    <div class="menu-panel active" id="tab-pizzas">
+      <div class="pizza-grid">
+
+        <div class="pizza-card">
+          <img class="pizza-card-img" src="Foods/1.jpg" alt="Alfresco's Special" />
+          <div class="pizza-card-body">
+            <h4>Alfresco's Special</h4>
+            <p class="pizza-desc">Ham, pepperoni, mushrooms, bell peppers, onions, mozzarella cheese, signature sauce</p>
+            <div class="pizza-sizes">
+              <button class="size-btn active" onclick="selectSize(this, 475)">12"</button>
+              <button class="size-btn"        onclick="selectSize(this, 585)">14"</button>
+            </div>
+            <div class="pizza-price-display">₱<span class="price-val">475</span><span class="size-label">· 12 inch</span></div>
+          </div>
+        </div>
+
+        <div class="pizza-card">
+          <img class="pizza-card-img" src="Foods/2.jpg" alt="Alfresco Signature" />
+          <div class="pizza-card-body">
+            <h4>Hawaiian</h4>
+            <p class="pizza-desc">Smoked ham, sweet pineapple, mozzarella cheese, tomato sauce</p>
+            <div class="pizza-sizes">
+              <button class="size-btn active" onclick="selectSize(this, 325)">12"</button>
+              <button class="size-btn"        onclick="selectSize(this, 435)">14"</button>
+            </div>
+            <div class="pizza-price-display">₱<span class="price-val">325</span><span class="size-label">· 12 inch</span></div>
+          </div>
+        </div>
+
+        <div class="pizza-card">
+          <img class="pizza-card-img" src="Foods/3.jpg" alt="Diavola" />
+          <div class="pizza-card-body">
+            <h4>S'mores</h4>
+            <p class="pizza-desc">Chocolate spread, toasted marshmallows, crushed graham crackers, mozzarella blend</p>
+            <div class="pizza-sizes">
+              <button class="size-btn active" onclick="selectSize(this, 300)">12"</button>
+              <button class="size-btn"        onclick="selectSize(this, 425)">14"</button>
+            </div>
+            <div class="pizza-price-display">₱<span class="price-val">300</span><span class="size-label">· 12 inch</span></div>
+          </div>
+        </div>
+
+        <div class="pizza-card">
+          <img class="pizza-card-img" src="Foods/4.jpg" alt="New York Style" />
+          <div class="pizza-card-body">
+            <h4>New York Style</h4>
+            <p class="pizza-desc">Tomato sauce, mozzarella cheese, parmesan, oregano</p>
+            <div class="pizza-sizes">
+              <button class="size-btn active" onclick="selectSize(this, 330)">12"</button>
+              <button class="size-btn"        onclick="selectSize(this, 440)">14"</button>
+            </div>
+            <div class="pizza-price-display">₱<span class="price-val">330</span><span class="size-label">· 12 inch</span></div>
+          </div>
+        </div>
+
+      </div><!-- /pizza-grid preview -->
+
+      <!-- View Full Menu button -->
+      <div class="view-full-menu-wrap">
+        <button class="btn-view-full" onclick="openMenuModal('pizzas')">View Full Pizza Menu ↓</button>
+      </div>
+    </div><!-- /tab-pizzas -->
+
+    <!-- ── PASTA — 4 preview + View Full Menu ─────────────── -->
+    <div class="menu-panel" id="tab-pasta">
+      <div class="menu-grid preview-grid">
+        <div class="menu-item"><div class="menu-item-info"><h4>Alfresco's Special Pasta</h4><p>Creamy tomato sauce, ground beef, parmesan cheese</p></div><div class="menu-item-price">₱190</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Aglio Olio w/ Shrimps</h4><p>Garlic olive oil pasta, sautéed shrimp, chili flakes</p></div><div class="menu-item-price">₱170</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Carbonary w/ Pesto Bread</h4><p>Creamy carbonara sauce, bacon bits, toasted pesto bread</p></div><div class="menu-item-price">₱170</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Spicy Garlic Pasta w/ PestoBread</h4><p>Garlic chili pasta, herbs, pesto bread</p></div><div class="menu-item-price">₱170</div></div>
+
+      
+      </div>
+      <div class="view-full-menu-wrap">
+        <button class="btn-view-full" onclick="openMenuModal('pasta')">View Full Pasta Menu ↓</button>
+      </div>
+    </div>
+
+    <!-- ── appetizers — 4 preview + View Full Menu ──────────── -->
+    <div class="menu-panel" id="tab-appetizers">
+      <div class="menu-grid preview-grid">
+        <div class="menu-item"><div class="menu-item-info"><h4>Onion Rings</h4><p>Crispy battered onion rings, garlic mayo dip</p></div><div class="menu-item-price">₱380</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Fried Calamari</h4><p>Golden fried squid rings, lemon wedge, spicy vinegar</p></div><div class="menu-item-price">₱450</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>House Fries</h4><p>Crispy potato fries, sea salt, ketchup dip</p></div><div class="menu-item-price">₱680</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Mojos</h4><p>Seasoned potato mojos, creamy garlic dip</p></div><div class="menu-item-price">₱110</div></div>
+
+      </div>
+      <div class="view-full-menu-wrap">
+        <button class="btn-view-full" onclick="openMenuModal('appetizers')">View Full Appetizers Menu ↓</button>
+      </div>
+    </div>
+
+    <!-- ── breakfast — 4 preview + View Full Menu ──────────── -->
+    <div class="menu-panel" id="tab-breakfast">
+      <div class="menu-grid preview-grid">
+        <div class="menu-item"><div class="menu-item-info"><h4>Beef Tapa</h4><p>Marinated beef strips, garlic rice, fried egg</p></div><div class="menu-item-price">₱220</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Bacon</h4><p>Crispy bacon strips, garlic rice, fried egg</p></div><div class="menu-item-price">₱195</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Pork Tocino</h4><p>Sweet cured pork, garlic rice, fried egg</p></div><div class="menu-item-price">₱240</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Cabagan Longganisa</h4><p>Native sausage, garlic rice, fried egg</p></div><div class="menu-item-price">₱240</div></div>
+      </div>
+      <div class="view-full-menu-wrap">
+        <button class="btn-view-full" onclick="openMenuModal('breakfast')">View Full Breakfast Menu ↓</button>
+      </div>
+    </div>
+
+    <!-- ── burger — 4 preview + View Full Menu ────────────── -->
+    <div class="menu-panel" id="tab-burgers">
+      <div class="menu-grid preview-grid">
+        <div class="menu-item"><div class="menu-item-info"><h4>Bacon &Mushroom Burger</h4><p>Beef patty, crispy bacon, sautéed mushrooms, cheese</p></div><div class="menu-item-price">₱90</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Cheese Burger</h4><p>Beef patty, cheddar cheese, lettuce, tomato</p></div><div class="menu-item-price">₱130</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Hamburger</h4><p>Juicy beef patty, fresh lettuce, signature sauce</p></div><div class="menu-item-price">₱110</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Club House Sandwich</h4><p>Chicken, ham, egg, lettuce, tomato, toasted bread</p></div><div class="menu-item-price">₱110</div></div>
+      </div>
+      <div class="view-full-menu-wrap">
+        <button class="btn-view-full" onclick="openMenuModal('burgers')">View Full Burgers Menu ↓</button>
+      </div>
+    </div>
+
+    <!-- ── DRINKS — 4 preview + View Full Menu ────────────── -->
+    <div class="menu-panel" id="tab-drinks">
+      <div class="menu-grid preview-grid">
+        <div class="menu-item"><div class="menu-item-info"><h4>Cosmopolitan</h4><p>Vodka, triple sec, cranberry juice, fresh lime</p></div><div class="menu-item-price">₱90</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Vodka Martini</h4><p>Premium vodka, dry vermouth, olive garnish</p></div><div class="menu-item-price">₱130</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Screw Driver</h4><p>Vodka, freshly squeezed orange juice, ice</p></div><div class="menu-item-price">₱110</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Blue Lagoon</h4><p>Vodka, blue curaçao, lemonade, citrus twist</p></div><div class="menu-item-price">₱110</div></div>
+      </div>
+      <div class="view-full-menu-wrap">
+        <button class="btn-view-full" onclick="openMenuModal('drinks')">View Full Drinks Menu ↓</button>
+      </div>
+    </div>
+
+    <!-- ── main — 4 preview + View Full Menu ────────────── -->
+    <div class="menu-panel" id="tab-main">
+      <div class="menu-grid preview-grid">
+        <div class="menu-item"><div class="menu-item-info"><h4>Crispy Pata</h4><p>Deep-fried pork knuckle, soy vinegar dip</p></div><div class="menu-item-price">₱760</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Lechon Kawali</h4><p>Crispy pork belly, liver sauce</p></div><div class="menu-item-price">₱265</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Lechon Kawali Sisg</h4><p>Chopped crispy pork, onions, chili, sizzling plate</p></div><div class="menu-item-price">₱295</div></div>
+        <div class="menu-item"><div class="menu-item-info"><h4>Pork Sizzling Sisig</h4><p>Pork sisig, calamansi, chili peppers</p></div><div class="menu-item-price">₱260</div></div>
+      </div>
+      <div class="view-full-menu-wrap">
+        <button class="btn-view-full" onclick="openMenuModal('main')">View Full Main Menu ↓</button>
+      </div>
+    </div>
+
+  </section><!-- /menu -->
+
+  <!-- ══════════════════════════════════════════════════════════
+       FULL MENU MODALS 
+  ══════════════════════════════════════════════════════════ -->
+
+  <!-- FULL PIZZA MODAL -->
+  <div class="menu-modal" id="menu-modal-pizzas">
+    <div class="menu-modal-box">
+      <div class="menu-modal-header">
+        <div>
+          <div class="menu-modal-label">Full Menu</div>
+          <h3 class="menu-modal-title">All Pizzas</h3>
+        </div>
+        <button class="menu-modal-close" onclick="closeMenuModal('pizzas')">✕</button>
+      </div>
+      <div class="menu-modal-body">
+        <div class="full-menu-list">
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/1.jpg" alt="Alfresco's Specia" />
+            <div class="full-menu-info">
+              <h4>Alfresco's Special</h4>
+              <p>Ham, pepperoni, mushrooms, bell peppers, onions, mozzarella cheese, signature sauce</p>
+              <div class="full-menu-sizes">
+                <span>12" — ₱475</span>
+                <span>14" — ₱585</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/2.jpg" alt="Hawaiian" />
+            <div class="full-menu-info">
+              <h4>Hawaiian</h4>
+              <p>Ham, sweet pineapple, mozzarella cheese, tomato sauce</p>
+              <div class="full-menu-sizes"><span>12" — ₱325</span><span>14" — ₱435</span></div>
+            </div>
+          </div>
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/3.jpg" alt="S'Mores" />
+            <div class="full-menu-info">
+              <h4>S'Mores</h4>
+              <p>Chocolate spread, toasted marshmallows, crushed graham crackers</p>
+              <div class="full-menu-sizes"><span>12" — ₱300</span><span>14" — ₱425</span></div>
+            </div>
+          </div>
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/4.jpg" alt="New York Style" />
+            <div class="full-menu-info">
+              <h4>New York Style</h4>
+              <p>Tomato sauce, mozzarella cheese, parmesan, oregano</p>
+              <div class="full-menu-sizes"><span>12" — ₱330</span><span>14" — ₱440</span></div>
+            </div>
+          </div>
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/5.jpg" alt="Mozarella N' Garlic" />
+            <div class="full-menu-info">
+              <h4>Mozarella N' Garlic</h4>
+              <p>Roasted garlic, mozzarella cheese, parmesan, butter herb sauce</p>
+              <div class="full-menu-sizes"><span>12" — ₱330</span><span>14" — ₱440</span></div>
+            </div>
+          </div>
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/6.jpg" alt="Chicken Alfredo" />
+            <div class="full-menu-info">
+              <h4>Chicken Alfredo</h4>
+              <p>Creamy alfredo sauce, grilled chicken, mozzarella cheese, parmesan</p>
+              <div class="full-menu-sizes"><span>12" — ₱350</span><span>14" — ₱460</span></div>
+            </div>
+          </div>
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/7.jpg" alt="Steak & Fries" />
+            <div class="full-menu-info">
+              <h4>Steak & Fries</h4>
+              <p>Crispy fries, mozzarella cheese, garlic aioli drizzle</p>
+              <div class="full-menu-sizes"><span>12" — ₱360</span><span>14" — ₱470</span></div>
+            </div>
+          </div>
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/8.jpg" alt="All Meat" />
+            <div class="full-menu-info">
+              <h4>All Meat</h4>
+              <p>Pepperoni, ham, bacon, sausage, mozzarella cheese, rich tomato sauce</p>
+              <div class="full-menu-sizes"><span>12" — ₱360</span><span>14" — ₱470</span></div>
+            </div>
+          </div>
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/9.jpg" alt="Pepproni & Cheese" />
+            <div class="full-menu-info">
+              <h4>Pepproni & Cheese</h4>
+              <p>Classic pepperoni, mozzarella cheese, tomato sauce, Italian herbs</p>
+              <div class="full-menu-sizes"><span>12" — ₱375</span><span>14" — ₱485</span></div>
+            </div>
+          </div>
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/10.jpg" alt="Bacon & Mushroom" />
+            <div class="full-menu-info">
+              <h4>Bacon & Mushroom</h4>
+              <p>Crispy bacon, sautéed mushrooms, mozzarella cheese, garlic cream sauce</p>
+              <div class="full-menu-sizes"><span>12" — ₱410</span><span>14" — ₱520</span></div>
+            </div>
+          </div>
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/11.jpg" alt="Detroit Style" />
+            <div class="full-menu-info">
+              <h4>Detroit Style</h4>
+              <p>Thick crust, tomato sauce, mozzarella cheese, pepperoni, parmesan edges</p>
+              <div class="full-menu-sizes"><span>12" — ₱439</span><span>14" — ₱549</span></div>
+            </div>
+          </div>
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/12.jpg" alt="Bruschetta Chicken" />
+            <div class="full-menu-info">
+              <h4>Bruschetta Chicken</h4>
+              <p>Grilled chicken, fresh tomatoes, basil, mozzarella cheese, balsamic glaze</p>
+              <div class="full-menu-sizes"><span>12" — ₱439</span><span>14" — ₱549</span></div>
+            </div>
+          </div>
+
+          <div class="full-menu-item pizza-full">
+            <img src="Foods/13.jpg" alt="White & Gold" />
+            <div class="full-menu-info">
+              <h4>White & Gold</h4>
+              <p>Cream cheese sauce, mozzarella, parmesan, roasted garlic, herbs</p>
+              <div class="full-menu-sizes"><span>12" — ₱475</span><span>14" — ₱580</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL PASTA MODAL -->
+  <div class="menu-modal" id="menu-modal-pasta">
+    <div class="menu-modal-box">
+      <div class="menu-modal-header">
+        <div><div class="menu-modal-label">Full Menu</div><h3 class="menu-modal-title">Pasta &amp; Noodles</h3></div>
+        <button class="menu-modal-close" onclick="closeMenuModal('pasta')">✕</button>
+      </div>
+      <div class="menu-modal-body">
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Alfresco's Special Pasta</h4><p>Creamy tomato sauce, ground beef, parmesan cheese</p></div><div class="full-menu-price">₱190</div></div>
+        <div class="full-menu-item"><div class="full-menu-info"><h4>Aglio Olio w/ Shrimps</h4><p>Garlic olive oil pasta, sautéed shrimp, chili flakes</p></div><div class="full-menu-price">₱170</div></div>
+        <div class="full-menu-item"><div class="full-menu-info"><h4>Carbonary w/ Pesto Bread</h4><p>Creamy carbonara sauce, bacon bits, toasted pesto bread</p></div><div class="full-menu-price">₱170</div></div>
+        <div class="full-menu-item"><div class="full-menu-info"><h4>Spicy Garlic Pasta w/ PestoBread</h4><p>Garlic chili pasta, herbs, pesto bread</p></div><div class="full-menu-price">₱170</div></div>
+        <div class="full-menu-item"><div class="full-menu-info"><h4>Spaghetti w/ Bread</h4><p>Rich tomato meat sauce, parmesan, pesto bread</p></div><div class="full-menu-price">₱170</div></div>
+        <div class="full-menu-item"><div class="full-menu-info"><h4>Bihon Guisado</h4><p>Stir-fried rice noodles, vegetables, chicken strips</p></div><div class="full-menu-price">₱130</div></div>
+        <div class="full-menu-item"><div class="full-menu-info"><h4>Sotanghon Guisado</h4><p>Glass noodles, mixed vegetables, savory seasoning</p></div><div class="full-menu-price">₱130</div></div>
+        <div class="full-menu-item"><div class="full-menu-info"><h4>Pancit Guisado</h4><p>Canton noodles, pork, vegetables, soy garlic sauce</p></div><div class="full-menu-price">₱130</div></div>
+        <div class="full-menu-item"><div class="full-menu-info"><h4>Lomi</h4><p>Thick egg noodles, rich broth, vegetables, pork toppings</p></div><div class="full-menu-price">₱220</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL appetizers MODAL -->
+  <div class="menu-modal" id="menu-modal-appetizers">
+    <div class="menu-modal-box">
+      <div class="menu-modal-header">
+        <div><div class="menu-modal-label">Full Menu</div><h3 class="menu-modal-title">Appetizers</h3></div>
+        <button class="menu-modal-close" onclick="closeMenuModal('appetizers')">✕</button>
+      </div>
+      <div class="menu-modal-body">
+        <div class="full-menu-list">
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Onion Rings</h4><p>Crispy battered onion rings, garlic mayo dip</p></div><div class="full-menu-price">₱260</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Fried Calamari</h4><p>Golden fried squid rings, lemon wedge, spicy vinegar</p></div><div class="full-menu-price">₱195</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>House Fries</h4><p>Crispy potato fries, sea salt, ketchup dip</p></div><div class="full-menu-price">₱130</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Mojos</h4><p>Seasoned potato mojos, creamy garlic dip</p></div><div class="full-menu-price">₱130</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Prawn Crackers</h4><p>Light crispy shrimp crackers, sweet chili sauce</p></div><div class="full-menu-price">₱60</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Beef Nachos</h4><p>Tortilla chips, seasoned beef, cheese sauce, jalapeños</p></div><div class="full-menu-price">₱270</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Chicken Shanghai</h4><p>Crunchy spring rolls, sweet chili dip</p></div><div class="full-menu-price">₱185</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Nuggets & Chips</h4><p>Chicken nuggets, crispy fries, honey mustard dip</p></div><div class="full-menu-price">₱130</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Cheese Sticks</h4><p>Mozzarella sticks, marinara sauce</p></div><div class="full-menu-price">₱150</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Chicken Tenders</h4><p>Breaded chicken strips, garlic ranch dip</p></div><div class="full-menu-price">₱185</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Buffalo Wings</h4><p>Spicy chicken wings, butter hot sauce</p></div><div class="full-menu-price">₱185</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Garlic Buttered Wings</h4><p>Chicken wings, garlic butter glaze, herbs</p></div><div class="full-menu-price">₱185</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>BBQ Wings</h4><p>Smoky barbecue chicken wings, sesame seeds</p></div><div class="full-menu-price">₱185</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL bfast MODAL -->
+  <div class="menu-modal" id="menu-modal-breakfast">
+    <div class="menu-modal-box">
+      <div class="menu-modal-header">
+        <div><div class="menu-modal-label">Full Menu</div><h3 class="menu-modal-title">Breakfast All Day</h3></div>
+        <button class="menu-modal-close" onclick="closeMenuModal('breakfast')">✕</button>
+      </div>
+      <div class="menu-modal-body">
+        <div class="full-menu-list">
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Beef Tapa</h4><p>Marinated beef strips, garlic rice, fried egg</p></div><div class="full-menu-price">₱175</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Bacon</h4><p>Crispy bacon strips, garlic rice, fried egg</p></div><div class="full-menu-price">₱175</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Pork Tocino</h4><p>Sweet cured pork, garlic rice, fried egg</p></div><div class="full-menu-price">₱175</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Cabagan Longganisa</h4><p>Native sausage, garlic rice, fried egg</p></div><div class="full-menu-price">₱175</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Corned Beef</h4><p>Savory corned beef, garlic rice, fried egg</p></div><div class="full-menu-price">₱175</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Spam</h4><p>Grilled spam slices, garlic rice, fried egg</p></div><div class="full-menu-price">₱175</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <!-- FULL Burger MODAL -->
+  <div class="menu-modal" id="menu-modal-burgers">
+    <div class="menu-modal-box">
+      <div class="menu-modal-header">
+        <div><div class="menu-modal-label">Full Menu</div><h3 class="menu-modal-title">Burgers</h3></div>
+        <button class="menu-modal-close" onclick="closeMenuModal('burgers')">✕</button>
+      </div>
+      <div class="menu-modal-body">
+        <div class="full-menu-list">
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Bacon & Mushroom Burger</h4><p>Beef patty, crispy bacon, sautéed mushrooms, cheese</p></div><div class="full-menu-price">₱175</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Cheese Burger</h4><p>Beef patty, cheddar cheese, lettuce, tomato</p></div><div class="full-menu-price">₱145</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Hamburger</h4><p>Juicy beef patty, fresh lettuce, signature sauce</p></div><div class="full-menu-price">₱140</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Club House Burger</h4><p>Chicken, ham, egg, lettuce, tomato, toasted bread</p></div><div class="full-menu-price">₱165</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Ham & Egg Sandwich</h4><p>Sliced ham, fried egg, mayo spread</p></div><div class="full-menu-price">₱145</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Grilled Sandwich</h4><p>Melted cheese blend, toasted buttered bread</p></div><div class="full-menu-price">₱145</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Alfresco Special Sandwich</h4><p>Ham, chicken, cheese, lettuce, special dressing</p></div><div class="full-menu-price">₱155</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FULL DRINKS MODAL -->
+  <div class="menu-modal" id="menu-modal-drinks">
+    <div class="menu-modal-box">
+      <div class="menu-modal-header">
+        <div><div class="menu-modal-label">Full Menu</div><h3 class="menu-modal-title">Drinks</h3></div>
+        <button class="menu-modal-close" onclick="closeMenuModal('drinks')">✕</button>
+      </div>
+      <div class="menu-modal-body">
+        <div class="full-menu-list">
+
+          <!-- ── COCKTAILS ── -->
+          <div class="drinks-category-title">Cocktails</div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Cosmopolitan</h4><p>Vodka, triple sec, cranberry juice, fresh lime</p></div><div class="full-menu-price">₱190</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Vodka Martini</h4><p>Premium vodka, dry vermouth, olive garnish</p></div><div class="full-menu-price">₱160</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Screw Driver</h4><p>Vodka, freshly squeezed orange juice, ice</p></div><div class="full-menu-price">₱140</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Blue Lagoon</h4><p>Vodka, blue curaçao, lemonade, citrus twist</p></div><div class="full-menu-price">₱120</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Tom Collins</h4><p>Gin, fresh lemon juice, simple syrup, soda water</p></div><div class="full-menu-price">₱120</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Tequila Sunrise</h4><p>Tequila, orange juice, grenadine, orange slice</p></div><div class="full-menu-price">₱150</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Classic Margarita</h4><p>Tequila, triple sec, fresh lime juice, salted rim</p></div><div class="full-menu-price">₱140</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Cranberry Tequila</h4><p>Tequila, cranberry juice, lime, splash of soda</p></div><div class="full-menu-price">₱160</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Mojito</h4><p>White rum, fresh mint, lime juice, sugar, soda water</p></div><div class="full-menu-price">₱110</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Daquiri Classico</h4><p>White rum, fresh lime juice, sugar syrup, blended smooth</p></div><div class="full-menu-price">₱120</div></div>
+
+          <!-- ── BEVERAGESpricing ── -->
+          <div class="drinks-category-title">Beverages</div>
+
+          <!-- Column labels -->
+          <div class="drinks-col-header">
+            <span></span>
+            <span>Solo</span>
+            <span>Family</span>
+          </div>
+
+          <!-- Solo + Family drinks  -->
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Coke/Royal/Sprite 1.5L</h4></div>
+            <span class="drinks-price"></span>
+            <span class="drinks-price">₱150</span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Pineapple in can</h4></div>
+            <span class="drinks-price">₱65</span>
+            <span class="drinks-price"></span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Four Season in can</h4></div>
+            <span class="drinks-price">₱65</span>
+            <span class="drinks-price"></span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Soda in can</h4></div>
+            <span class="drinks-price">₱65</span>
+            <span class="drinks-price"></span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Iced Tea</h4></div>
+            <span class="drinks-price">₱30</span>
+            <span class="drinks-price">89</span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Blue Lemonade</h4></div>
+            <span class="drinks-price">₱30</span>
+            <span class="drinks-price">89</span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Cucumber Lemonade</h4></div>
+            <span class="drinks-price">₱60</span>
+            <span class="drinks-price">160</span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Banana Shake</h4></div>
+            <span class="drinks-price">₱120</span>
+            <span class="drinks-price"></span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Buko Shake</h4></div>
+            <span class="drinks-price">₱120</span>
+            <span class="drinks-price"></span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Mango Shake</h4></div>
+            <span class="drinks-price">₱120</span>
+            <span class="drinks-price"></span>
+          </div>
+
+          
+
+          <!-- ── TOWER ── -->
+          <div class="drinks-category-title">Tower</div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Orange Blitz</h4></div><div class="full-menu-price">₱499</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Pink Fox</h4></div><div class="full-menu-price">₱520</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Wicked Black Flash</h4></div><div class="full-menu-price">₱520</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Mystic Blue Crush</h4></div><div class="full-menu-price">₱545</div></div>
+
+          <!-- ── BEERS — Solo or Bucket pricing ── -->
+          <div class="drinks-category-title">Beers</div>
+
+          <div class="drinks-col-header">
+            <span></span>
+            <span>Solo</span>
+            <span>Bucket</span>
+          </div>
+
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>San Miguel Light</h4></div>
+            <span class="drinks-price">₱85</span>
+            <span class="drinks-price">₱499</span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>San Miguel Apple</h4></div>
+            <span class="drinks-price">₱80</span>
+            <span class="drinks-price">₱459</span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Red Horse</h4></div>
+            <span class="drinks-price">₱95</span>
+            <span class="drinks-price">₱529</span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Pale Pilsen</h4></div>
+            <span class="drinks-price">₱85</span>
+            <span class="drinks-price">₱499</span>
+          </div>
+
+          <!-- ── HARD DRINKS & WINES ── -->
+          
+          
+          <div class="drinks-category-title">Hard Drinks &amp; Wines</div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Jack Daniels Original</h4></div><div class="full-menu-price">₱1,700</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Jack Daniels Apple</h4></div><div class="full-menu-price">₱1,800</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>El Hombre</h4></div><div class="full-menu-price">₱589</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>GSM Gin</h4></div><div class="full-menu-price">₱479</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Toska Vodka</h4></div><div class="full-menu-price">₱469</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Alfonso Light</h4></div><div class="full-menu-price">₱579</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Frontera Moscato</h4></div><div class="full-menu-price">₱859</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Yellow Tail Moscato</h4></div><div class="full-menu-price">₱879</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Yellow Tail Red Moscato</h4></div><div class="full-menu-price">₱889</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Yellow Tail Gold Moscato</h4></div><div class="full-menu-price">₱879</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Carlo Rossi Pink Moscato</h4></div><div class="full-menu-price">₱889</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Gossip Pink Moscato</h4></div><div class="full-menu-price">₱889</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Gossip Sweet Lips Moscato</h4></div><div class="full-menu-price">₱889</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Novelino</h4></div><div class="full-menu-price">₱789</div></div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- FULL Main MODAL -->
+  <div class="menu-modal" id="menu-modal-main">
+    <div class="menu-modal-box">
+      <div class="menu-modal-header">
+        <div><div class="menu-modal-label">Full Menu</div><h3 class="menu-modal-title">Main Dishes</h3></div>
+        <button class="menu-modal-close" onclick="closeMenuModal('main')">✕</button>
+      </div>
+      <div class="menu-modal-body">
+        <div class="full-menu-list">
+          <h3 class="menu-modal-title">Pork, Chicken & Beef</h3>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Crispy Pata</h4><p>Deep-fried pork knuckle, soy vinegar dip</p></div><div class="full-menu-price">₱760</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Lechon Kawali</h4><p>Crispy pork belly, liver sauce</p></div><div class="full-menu-price">₱265</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Lechon Kawali Sisig</h4><p>Chopped crispy pork, onions, chili, sizzling plate</p></div><div class="full-menu-price">₱295</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Pork Sizziling Sisig</h4><p>Pork sisig, calamansi, chili peppers</p></div><div class="full-menu-price">₱260</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Pork Sinigang</h4><p>Tamarind broth, pork belly, fresh vegetables</p></div><div class="full-menu-price">₱320</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Sizzling Pork Chops</h4><p>Grilled pork chops, savory mushroom gravy</p></div><div class="full-menu-price">₱320</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Sizzling Fried Chicken</h4><p>Crispy chicken, butter gravy, sizzling plate</p></div><div class="full-menu-price">₱310</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Buttered Chicken</h4><p>Fried chicken pieces, creamy butter sauce</p></div><div class="full-menu-price">₱310</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Tinola</h4><p>Ginger chicken broth, green papaya, chili leaves</p></div><div class="full-menu-price">₱310</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Adobong Manok</h4><p>Soy garlic chicken adobo, bay leaves</p></div><div class="full-menu-price">₱290</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Fried Chicken</h4><p>Golden crispy chicken, house gravy</p></div><div class="full-menu-price">₱295</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Creamy Pesto Chicken</h4><p>Grilled chicken, creamy pesto sauce, parmesan</p></div><div class="full-menu-price">₱310</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Beef w/ Brocolli</h4><p>Beef strips, broccoli florets, oyster sauce</p></div><div class="full-menu-price">₱355</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Beef Steak Tagalog</h4><p>Beef slices, soy calamansi sauce, onions</p></div><div class="full-menu-price">₱355</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Beef w/ Ampalaya</h4><p>Beef strips, bitter melon, garlic sauce</p></div><div class="full-menu-price">₱355</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Bulalo</h4><p>Beef shank soup, corn, cabbage, rich bone marrow broth</p></div><div class="full-menu-price">₱760</div></div>
+          <h3 class="menu-modal-title">Fish & Seafood</h3>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Sinigang na Hipon</h4><p>Tamarind shrimp soup, fresh vegetables</p></div><div class="full-menu-price">₱360</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Garlic Buttered Shrimp</h4><p>Shrimp sautéed in garlic butter sauce</p></div><div class="full-menu-price">₱360</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Spicy Sizzling Gambas</h4><p>Spicy shrimp, garlic chili oil, sizzling plate</p></div><div class="full-menu-price">₱365</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Sinigang na Salmon Belly</h4><p>Salmon belly soup, tamarind broth, vegetables</p></div><div class="full-menu-price">₱315</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Squid Adobo</h4><p>Squid simmered in soy garlic sauce</p></div><div class="full-menu-price">₱210</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Sweet & Sour Fish Fillet</h4><p>Crispy fish fillet, sweet sour glaze, bell peppers</p></div><div class="full-menu-price">₱220</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Nilagang Tahong</h4><p>Steamed mussels, ginger broth</p></div><div class="full-menu-price">₱210</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Buttered Tahong</h4><p>Mussels sautéed in creamy garlic butter sauce</p></div><div class="full-menu-price">₱250</div></div>
+          <h3 class="menu-modal-title">Vegetables</h3>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Chopsuey</h4><p>Mixed vegetables, pork slices, savory sauce</p></div><div class="full-menu-price">260</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Stir Fried Veggies</h4><p>Seasonal vegetables, garlic soy glaze</p></div><div class="full-menu-price">₱240</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Pinakbet</h4><p>Mixed native vegetables, shrimp paste</p></div><div class="full-menu-price">₱290</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Butter Garlic Baguio Beans</h4><p>Sautéed green beans, garlic butte</p></div><div class="full-menu-price">₱190</div></div>
+          <div class="full-menu-item"><div class="full-menu-info"><h4>Sauteed Ampalaya w/ Eggs</h4><p>Bitter melon, scrambled egg, garlic onions</p></div><div class="full-menu-price">₱230</div></div>
+          <h3 class="menu-modal-title">Rice &amp; Soup</h3>
+
+          <!-- Solo / Family column header -->
+          <div class="drinks-col-header">
+            <span></span>
+            <span>Solo</span>
+            <span>Family</span>
+          </div>
+
+          <!-- Plain & Garlic — Solo + Family pricing -->
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Plain Rice</h4><p>Steamed white rice</p></div>
+            <span class="drinks-price">₱30</span>
+            <span class="drinks-price">₱99</span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Garlic Rice</h4><p>Fried rice, roasted garlic bits</p></div>
+            <span class="drinks-price">₱35</span>
+            <span class="drinks-price">₱120</span>
+          </div>
+
+          <!-- Rice + Pricing -->
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Yangchow</h4><p>Fried rice, shrimp, egg, mixed vegetables</p></div>
+            <span class="drinks-price"></span>
+            <span class="drinks-price">₱290</span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Crab &amp; Corn Soup</h4><p>Creamy soup, crab meat, sweet corn</p></div>
+            <span class="drinks-price"></span>
+            <span class="drinks-price">₱210</span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Cream of Mushroom</h4><p>Creamy mushroom soup, herbs</p></div>
+            <span class="drinks-price"></span>
+            <span class="drinks-price">₱210</span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Chicken Soup</h4><p>Savory chicken broth, vegetables</p></div>
+            <span class="drinks-price"></span>
+            <span class="drinks-price">₱210</span>
+          </div>
+          <div class="full-menu-item drinks-two-price">
+            <div class="full-menu-info"><h4>Hototay Soup</h4><p>Thick seafood soup, vegetables, egg ribbons</p></div>
+            <span class="drinks-price"></span>
+            <span class="drinks-price">₱245</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       ABOUT 
+  ══════════════════════════════════════════════════════════ -->
+  <div class="split" id="about">
+    <div class="split-img">
+      
+      <img src="Highlights/roof1.jpg" alt="Inside Alfresco" />
+    </div>
+    <div class="split-text">
+      <div class="section-label">Our Story</div>
+      <h2 class="section-title">A Table Under the Sky</h2>
+      <div class="divider"></div>
+      <p>Alfresco Pizzeria & Bistro was built around a love for good food and laid-back dining. Inspired by the joy of sharing meals with family and friends, we created a space where comfort, flavor, and hospitality come together.</p>
+      <p>From freshly prepared pizzas to satisfying house favorites, every dish is made with care using quality ingredients. Whether you're here for casual dinners, celebrations, or late-night cravings, Alfresco is made to feel welcoming, familiar, and worth coming back to.</p>
+      <a href="#contact" class="btn btn-outline-green" style="margin-top:12px;">Find Us</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FEATURES
+  ══════════════════════════════════════════════════════════ -->
+  <div class="features-grid">
+    <div class="feature-card">
+      <div class="feature-icon">🔥</div>
+      <h3>Freshly Made Favorites</h3>
+      <p>From pizzas and pasta to crowd-favorite comfort meals, every dish is prepared fresh and served hot.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🌿</div>
+      <h3>Relaxed Dining Atmosphere</h3>
+      <p>Enjoy a casual and welcoming space perfect for family gatherings, barkada nights, and celebrations.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">🍷</div>
+      <h3>Perfect for Sharing</h3>
+      <p>Good food tastes better together — ideal for groups, special occasions, or simple catch-ups.</p>
+    </div>
+    <div class="feature-card">
+      <div class="feature-icon">✨</div>
+      <h3>Comfort Food Done Right</h3>
+      <p>Simple ingredients, satisfying flavors, and meals made for everyday enjoyment.</p>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       QUOTE BAND
+  ══════════════════════════════════════════════════════════ -->
+  <div class="quote-band">
+    <blockquote>"Pizza is a circle, and circles have no end — neither does our love for good food."</blockquote>
+    <cite>— The Alfresco Kitchen</cite>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       SPLIT — PIZZA FEATURE
+  ══════════════════════════════════════════════════════════ -->
+  <div class="split reverse">
+    <div class="split-img">
+      
+      <img src="Highlights/signature.jpg" alt="Wood-fired pizza" />
+    </div>
+    <div class="split-text">
+      <div class="section-label">Signature</div>
+      <h2 class="section-title">Made Fresh, Served Hot</h2>
+      <div class="divider"></div>
+      <p>From oven-baked pizzas to flavorful house specialties, every plate is prepared with care to deliver comforting flavors you’ll want to come back for</p>
+      <a href="#menu" class="btn btn-primary" style="align-self:flex-start; margin-top:12px;">View Full Menu</a>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       EVENTS & CATERING
+       Clicking a card calls openEventModal() in main.js
+  ══════════════════════════════════════════════════════════ -->
+  <section style="background: var(--white); padding-bottom: 0;" id="services">
+    <div class="section-label">More Than a Meal</div>
+    <h2 class="section-title">Catering &amp; Events</h2>
+    <div class="divider"></div>
+    <p class="section-sub">Let us bring the Alfresco experience to your next gathering — from intimate dinners to full-scale celebrations. Click a card to see our work.</p>
+  </section>
+
+  <div class="services-grid" style="padding: 0 60px 92px; background: var(--white);">
+
+    <div class="service-card" onclick="openEventModal('catering')">
+      
+      <img src="Catering/6.jpg" alt="Catering" />
+      <div class="service-card-overlay">
+        <h3>Catering</h3>
+        <p>Private dinners, office lunches, beach picnics — our kitchen travels with you.</p>
+        <span class="view-btn">View Photos ↗</span>
+      </div>
+    </div>
+
+    <div class="service-card" onclick="openEventModal('events')">
+      
+      <img src="Private/12.jpg" alt="Private Events" />
+      <div class="service-card-overlay">
+        <h3>Private Events</h3>
+        <p>Book our terrace or dining room for birthdays, anniversaries, and celebrations.</p>
+        <span class="view-btn">View Photos ↗</span>
+      </div>
+    </div>
+
+  </div>
+<!-- ══════ CATERING PHOTO MODAL ══════ -->
+
+<!-- ══════ BRANCH 1 MODAL ══════ -->
+  <div class="menu-modal branch-modal" id="branch-modal-branch1">
+    <div class="menu-modal-box branch-modal-box">
+      <div class="menu-modal-header">
+        <div>
+          <div class="menu-modal-label">Sister company of Alfresco Pizzeria & Bistro</div>
+          <h3 class="menu-modal-title">La Bella Vita Pizzeria & Cafe</h3>
+        </div>
+        <button class="menu-modal-close" onclick="closeBranchModal('branch1')">✕</button>
+      </div>
+      <div class="menu-modal-body">
+
+        
+        <div class="branch-img-wrap">
+          <img src="Branches/bella1.jpg" alt="Branch 1" />
+        </div>
+
+        <div class="branch-details">
+          <div class="branch-detail-row">
+            <strong>📍</strong>
+             <a href="https://maps.app.goo.gl/P3FaX58eQNd89Tee6">Maharlika Highway, Brgy. San Pedro, Tumauini, Philippines, 3325</a>
+          </div>
+          <div class="branch-detail-row">
+            <strong>📞</strong>
+            <a href="tel:0985 931 0536">0985 931 0536</a>
+          </div>
+          <div class="branch-detail-row">
+            <strong>🕐</strong>
+            <span>Sun–Mon-Tues-Thu 10AM–10:00PM &nbsp;·&nbsp; Wed 1:00PM–10:00PM<br>Fri-Sat 10AM–12:00PM</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════ BRANCH 2 MODAL ══════ -->
+  <div class="menu-modal branch-modal" id="branch-modal-branch2">
+    <div class="menu-modal-box branch-modal-box">
+      <div class="menu-modal-header">
+        <div>
+          <div class="menu-modal-label">Camalaniugan branch of Alfresco Pizzeria & Bistro</div>
+          <h3 class="menu-modal-title">Alfresco Pizzeria and Bistro at Balai Isabel</h3>
+        </div>
+        <button class="menu-modal-close" onclick="closeBranchModal('branch2')">✕</button>
+      </div>
+      <div class="menu-modal-body">
+
+        <div class="branch-img-wrap">
+          <img src="Branches/balai1.jpg" alt="Branch 2" />
+        </div>
+
+        <div class="branch-details">
+          <div class="branch-detail-row">
+            <strong>📍</strong>
+            <a href="https://maps.app.goo.gl/Cv3VyHLAqiSXciRb7">National Highway, Brgy.Saping, Camalaniugan, Cagayan</a>
+          </div>
+          <div class="branch-detail-row">
+            <strong>📞</strong>
+            <a href="tel:0915 848 7437">0915 848 7437</a>
+          </div>
+          <div class="branch-detail-row">
+            <strong>🕐</strong>
+            <span>Sun–Mon-Tues-Thu 10AM–10:00PM &nbsp;·&nbsp; Wed 1:00PM–10:00PM<br>Fri-Sat 10AM–12:00PM</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- ══════════════════════════════════════════════════════════
+       CATERING PHOTO MODAL
+  ══════════════════════════════════════════════════════════ -->
+  <div class="events-modal" id="modal-catering">
+    <div class="modal-header">
+      <div class="modal-title">
+        Catering
+        <small>Our catered events &amp; setups</small>
+      </div>
+      <button class="modal-close" onclick="closeEventModal('catering')" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-gallery">
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',0)">
+          <img src="Catering/1.jpg" alt="Catering 0" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',1)">
+          <img src="Catering/2.jpg" alt="Catering 1" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',2)">
+          <img src="Catering/3.jpg" alt="Catering 2" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',3)">
+          <img src="Catering/4.jpg" alt="Catering 3" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',4)">
+          <img src="Catering/5.jpg" alt="Catering 4" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',5)">
+          <img src="Catering/6.jpg" alt="Catering 5" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',6)">
+          <img src="Catering/7.jpg" alt="Catering 6" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',7)">
+          <img src="Catering/8.jpg" alt="Catering 7" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',8)">
+          <img src="Catering/9.jpg" alt="Catering 8" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',9)">
+          <img src="Catering/10.jpg" alt="Catering 9" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',10)">
+          <img src="Catering/11.jpg" alt="Catering 10" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',11)">
+          <img src="Catering/12.jpg" alt="Catering 11" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',12)">
+          <img src="Catering/13.jpg" alt="Catering 12" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',13)">
+          <img src="Catering/14.jpg" alt="Catering 13" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',14)">
+          <img src="Catering/15.jpg" alt="Catering 14" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',15)">
+          <img src="Catering/16.jpg" alt="Catering 15" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',16)">
+          <img src="Catering/17.jpg" alt="Catering 16" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',17)">
+          <img src="Catering/18.jpg" alt="Catering 17" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',18)">
+          <img src="Catering/19.jpg" alt="Catering 18" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('catering',19)">
+          <img src="Catering/20.jpg" alt="Catering 19" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       PRIVATE EVENTS PHOTO MODAL
+  ══════════════════════════════════════════════════════════ -->
+  <div class="events-modal" id="modal-events">
+    <div class="modal-header">
+      <div class="modal-title">
+        Private Events
+        <small>Celebrations, birthdays &amp; anniversaries</small>
+      </div>
+      <button class="modal-close" onclick="closeEventModal('events')" aria-label="Close">✕</button>
+    </div>
+    <div class="modal-body">
+      <div class="modal-gallery">
+        <div class="modal-gallery-item" onclick="openImgViewer('events',0)">
+          <img src="Private/1.jpg" alt="Event 0" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',1)">
+          <img src="Private/2.jpg" alt="Event 1" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',2)">
+          <img src="Private/3.jpg" alt="Event 2" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',3)">
+          <img src="Private/4.jpg" alt="Event 3" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',4)">
+          <img src="Private/5.jpg" alt="Event 4" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',5)">
+          <img src="Private/6.jpg" alt="Event 5" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',6)">
+          <img src="Private/7.jpg" alt="Event 6" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',7)">
+          <img src="Private/8.jpg" alt="Event 7" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',8)">
+          <img src="Private/9.jpg" alt="Event 8" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',9)">
+          <img src="Private/10.jpg" alt="Event 9" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',10)">
+          <img src="Private/11.jpg" alt="Event 10" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',11)">
+          <img src="Private/12.jpg" alt="Event 11" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',12)">
+          <img src="Private/13.jpg" alt="Event 12" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',13)">
+          <img src="Private/14.jpg" alt="Event 13" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',14)">
+          <img src="Private/15.jpg" alt="Event 14" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',15)">
+          <img src="Private/16.jpg" alt="Event 15" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',16)">
+          <img src="Private/17.jpg" alt="Event 16" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',17)">
+          <img src="Private/18.jpg" alt="Event 17" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',18)">
+          <img src="Private/19.jpg" alt="Event 18" />
+        </div>
+        <div class="modal-gallery-item" onclick="openImgViewer('events',19)">
+          <img src="Private/20.jpg" alt="Event 19" />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FULLSCREEN IMAGE VIEWER (shared by both modals)
+  ══════════════════════════════════════════════════════════ -->
+  <div class="img-viewer" id="img-viewer">
+    <button class="img-viewer-close" onclick="closeImgViewer()" aria-label="Close">✕</button>
+    <button class="img-viewer-nav img-viewer-prev" onclick="shiftImg(-1)" aria-label="Previous">‹</button>
+    <img id="img-viewer-img" src="" alt="Fullscreen event photo" />
+    <button class="img-viewer-nav img-viewer-next" onclick="shiftImg(1)" aria-label="Next">›</button>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       GALLERY STRIP
+  ══════════════════════════════════════════════════════════ -->
+  <div class="gallery-strip" id="gallery">
+    <div class="gallery-strip-item"><img src="Gallery/Gallery.jpg" alt="Alfresco dish" /></div>
+    <div class="gallery-strip-item"><img src="Gallery/Gallery2.jpg" alt="Pizza" /></div>
+    <div class="gallery-strip-item"><img src="Gallery/Gallery3.jpg" alt="Food" /></div>
+    <div class="gallery-strip-item"><img src="Gallery/Gallery4.jpg" alt="Bistro" /></div>
+    <div class="gallery-strip-item"><img src="Gallery/Gallery5.jpg" alt="Restaurant" /></div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       CONTACT & HOURS
+       All links of socmed
+  ══════════════════════════════════════════════════════════ -->
+  <div class="contact-section" id="contact">
+    <div class="contact-info">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Operating Hours </h2>
+      <div class="divider"></div>
+
+      <table class="hours-table">
+        <tr><td>Sunday - Monday – Tuesday - Thursday</td><td>10:00 AM – 10:00 PM</td></tr>
+        <tr><td>Friday - Saturday</td><td>10:00 AM – 12:00 MN</td></tr>
+        <tr><td>Wednesday</td><td>1:00 PM – 10:00 PM</td></tr>
+      </table>  
+          <a class="contact-detail contact-link"
+         href="tel:+639XXXXXXXXX">
+        <strong>📞</strong>
+        <span>0953 325 8230</span>
+      </a>
+
+       
+      <a class="contact-detail contact-link"
+         href="mailto:hello@alfrescopizzeria.com">
+        <strong>✉️</strong>
+        <span>alfrescopizzeriaandbistro@gmail.com</span>
+      </a>
+       
+      <div class="contact-socials">
+        <a class="contact-social-btn facebook"
+           href="https://www.facebook.com/share/1DHWK1atGU/?mibextid=wwXIfr"
+           target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+          </svg>
+          Facebook
+        </a>
+        <a class="contact-social-btn instagram"
+           href="https://www.instagram.com/alfresco_pizzeria_and_bistro?igsh=NW13OTV3M2psN3V4"
+           target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+            <circle cx="12" cy="12" r="4"/>
+            <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+          </svg>
+          Instagram
+        </a>
+      </div>         
+      
+
+      
+
+       <div class="section-label" style="margin-top: 32px;">Visit our other branches!</div>
+
+      <!-- Other Branches -->
+      <button class="btn-branch" onclick="openBranchModal('branch1')">
+        
+          <img class="branch-thumb"
+               src="Branches/Bella.jpg"
+               alt="Branch 1" />
+          <div class="branch-card-info">
+            <span class="branch-card-name">La Bella Vita Pizzeria & Cafe</span>
+            <span class="branch-card-addr">Maharlika Highway, Brgy. San Pedro, Tumauini, Philippines, 3325</span>
+            <span class="branch-card-cta">View details →</span>
+          </div>
+        </button>
+
+        <button class="btn-branch" onclick="openBranchModal('branch2')">
+          <img class="branch-thumb"
+               src="Branches/Balai.jpg"
+               alt="Branch 2" />
+          <div class="branch-card-info">
+            <span class="branch-card-name">Alfresco Pizzeria and Bistro at Balai Isabel</span>
+            <span class="branch-card-addr">National Highway, Brgy.Saping, Camalaniugan, Cagayan</span>
+            <span class="branch-card-cta">View details →</span>
+          </div>
+        </button>
+
+    </div><!-- /contact-info -->
+
+    <div class="contact-map">
+      <!--GOOGLE MAP -->  
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.597047674634!2d121.77116767493577!3d17.43111508346355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x338579a9b060b0cf%3A0xeac8c440925b7d12!2sAlfresco%20Pizzeria%20and%20Bistro!5e0!3m2!1sen!2sph!4v1778204611532!5m2!1sen!2sph"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Alfresco Pizzeria and Bistro location">
+      </iframe>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════════════════════
+       FOOTER
+  ══════════════════════════════════════════════════════════ -->
+  <footer>
+    <div class="foot-brand">
+      <img src="Highlights/alfresco-logo.jpg" alt="Alfresco Logo" class="foot-logo-img" />
+      <div class="foot-name">Alfresco Pizzeria &amp; Bistro</div>
+      <div class="foot-tagline">Est. 2020 · Beach House, Cabagan</div>
+    </div>
+    <ul class="foot-links">
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Events</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="foot-contact">
+      <p>Beach House, Cabagan, Isabela</p>
+      <!-- Phone link -->
+      <p><a href="tel:0953 325 8230" class="foot-link">0953 325 8230</a></p>
+      <!-- Email link -->
+      <p><a href="mailto:alfrescopizzeriaandbistro@gmail.com" class="foot-link">alfrescopizzeriaandbistro@gmail.com</a></p>
+      <div class="foot-social">
+        <a href="https://www.instagram.com/alfresco_pizzeria_and_bistro?igsh=NW13OTV3M2psN3V4" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a href="https://www.facebook.com/share/1DHWK1atGU/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer">Facebook</a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 Alfresco Pizzeria &amp; Bistro. All rights reserved.</div>
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="main.js"></script>
+
+</body>
+</html>
