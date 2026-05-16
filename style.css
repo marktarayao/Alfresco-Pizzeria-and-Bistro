@@ -1058,6 +1058,16 @@ footer {
   margin-bottom: 2px;
 }
 
+/* ── Main dishes modal — category title ── */
+.main-category-title {
+  font-family: var(--font-display);
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: var(--charcoal);
+  padding: 20px 0 10px;
+  margin-bottom: 2px;
+}
+
 /* ── Solo/Family or Solo/Bucket column header ── */
 .drinks-col-header {
   display: grid;
