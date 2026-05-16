@@ -918,6 +918,9 @@ footer {
   .foot-social      { justify-content: center; }
   .foot-links       { flex-direction: row; flex-wrap: wrap; justify-content: center; }
 
+  .menu-tabs        { display: grid; grid-template-columns: 1fr 1fr; gap: 0; }
+  .menu-tab         { padding: 14px 12px; font-size: 0.65rem; text-align: center; }
+
   .pizza-grid       { grid-template-columns: repeat(2, 1fr); }
   .menu-grid        { grid-template-columns: repeat(2, 1fr); }  
 }
