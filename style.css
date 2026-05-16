@@ -894,8 +894,24 @@ footer {
   .contact-info     { padding: 52px 20px; }
   .contact-map      { min-height: 400px; }
 
-  .gallery-strip    { grid-template-columns: repeat(3,1fr); height: 170px; }
-  .gallery-strip-item:nth-child(n+4) { display: none; }
+  .gallery-strip { 
+    display: flex;
+    overflow-x: auto;
+    height: 200px;
+    gap: 8px;
+    padding: 0 20px;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+  }
+  .gallery-strip-item { 
+    flex: 0 0 70%;
+    scroll-snap-align: center;
+  }
+  .gallery-strip-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 
   footer            { grid-template-columns: 1fr; text-align: center; padding: 36px 20px 24px; }
   .foot-contact     { text-align: center; }
