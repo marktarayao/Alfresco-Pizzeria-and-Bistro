@@ -892,6 +892,7 @@ footer {
 
   .contact-section  { grid-template-columns: 1fr; }
   .contact-info     { padding: 52px 20px; }
+  .contact-map      { min-height: 400px; }
 
   .gallery-strip    { grid-template-columns: repeat(3,1fr); height: 170px; }
   .gallery-strip-item:nth-child(n+4) { display: none; }
